@@ -15,5 +15,20 @@ buttonSend.addEventListener('click', sendTopic);
 function sendTopic(){
   sent.style.display = ('flex')
   acessForm.style.display = ('none')
+
 }
+
+const menuMobile = document.querySelector('.menu-mobile')
+const sidebar = document.querySelector ('.sidebar')
+
+menuMobile.addEventListener ('click', showSidebar)
+
+function showSidebar() {
+  if (sidebar.style.display == 'none') {
+    sidebar.style.display = ('block')
+  } else {
+    sidebar.style.display = ('none')
+  }
+}
+
 

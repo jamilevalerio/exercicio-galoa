@@ -1,0 +1,50 @@
+//padding & margin
+.p-15 {
+  padding: 15px;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+//background
+
+.bg-color-orange {
+  background: #ED7839;
+}
+
+.bg-color-light {
+  background: #FDF1EB;
+}
+
+.bg-gradient {
+  background: linear-gradient(180deg, #FFB354 0%, #EE7A3A 100%);
+}
+
+//font-colors
+
+.c-white {
+  color: white;
+}
+.c-orange {
+  color: #ED7839;
+}
+
+//borders
+
+.bd-gray {
+  border: 1px solid #ECECEC;
+}
+.bd-none {
+  border: none;
+}
+
+//buttons & links
+.btn {
+  text-decoration: none;
+  cursor: pointer;
+
+  &-orange {
+    background: #ED7839;
+  }
+}

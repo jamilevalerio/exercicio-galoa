@@ -4,52 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/style/style.css">
-
-  <script src="https://kit.fontawesome.com/4928138117.js"
-    crossorigin="anonymous"></script>
-
+  <link rel="stylesheet" href="assets/style/style.css">
+  <script src="https://kit.fontawesome.com/4928138117.js" crossorigin="anonymous"></script>
   <title>Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP</title>
 </head>
 <body>
-
-  <nav class="sidebar">
-    <div>
-      <h1>
-        SLACA 2019
-      </h1>
-    </div>
-
-    <div class="slaca-img"></div>
-
-    <ul class="menu">
-      <a href="#" class="menu-item">
-        <li>Apresentação</li>
-      </a>
-
-      <a href="" class="menu-item">
-        <li>Comitês</li>
-      </a>
-
-      <a href="" class="menu-item">
-        <li>Autores</li>
-      </a>
-
-      <a href="" class="menu-item">
-        <li>Eixos temáticos</li>
-      </a>
-
-      <a href="" class="menu-item active">
-        <li>Trabalhos</li>
-      </a>
-
-      <a href="" class="menu-item">
-        <li>Contato</li>
-      </a>
-    </ul>
-  </nav>
-
-  <!--header-->
   <header>
     <div class="header-text">
       <p>Anais do Simpósio Latino Americano de Ciências de Alimentos</p>
@@ -70,10 +29,43 @@
         <div><img src="media/slaca-user.svg" alt="foto do usuário"></div>
       </div>
   </header>
-  <!--Sidebar-->
 
+  <nav class="sidebar">
+    <div>
+      <h1>
+        SLACA 2019
+      </h1>
+    </div>
 
-  <!--Main-->
+    <div class="slaca-img"></div>
+
+    <ul class="menu">
+      <a href="https://proceedings.science/slaca-2019/apresentacao" class="menu-item">
+        <li>Apresentação</li>
+      </a>
+
+      <a href="https://proceedings.science/slaca/slaca-2019/comites" class="menu-item">
+        <li>Comitês</li>
+      </a>
+
+      <a href="https://proceedings.science/slaca/slaca-2019/autores" class="menu-item">
+        <li>Autores</li>
+      </a>
+
+      <a href="https://proceedings.science/slaca/slaca-2019/eixos-tematicos" class="menu-item">
+        <li>Eixos temáticos</li>
+      </a>
+
+      <a href="/" class="menu-item active">
+        <li>Trabalhos</li>
+      </a>
+
+      <a href="https://proceedings.science/slaca/slaca-2019/contato" class="menu-item">
+        <li>Contato</li>
+      </a>
+    </ul>
+  </nav>
+
   <main>
     <section class="first-section">
 
@@ -88,9 +80,9 @@
         <div class="lado2">
           <div >
             <div class="project-interactions">
-              <a href="#">Download</a>
+              <a href="https://proceedings.science/proceedings/100121/_papers/113386/download/abstract_file1" target="_blank">Download</a>
               <a href="#"><i class="fas fa-star"></i></a>
-              <a href="#">doi</a>
+              <a href="#"><img src="media/doi.png" alt=""></a>
             </div>
             <div class="project-quote">
               <a href="#">Como citar esse trabalho?</a>
@@ -141,7 +133,6 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia necessitatibus animi alias et esse voluptatem maxime quidem ex at voluptate minima, iste cum eligendi dolorum facilis obcaecati iusto placeat libero nemo, mollitia provident ut odio eius error. Voluptas molestias atque hic aspernatur velit quia eaque harum nobis explicabo. Impedit sed officiis nobis, eum tempore accusamus at vitae libero voluptas sit sapiente delectus, labore obcaecati dicta nesciunt doloremque et mollitia veritatis illo eos deserunt, adipisci minima! Commodi aut, cum cupiditate, deserunt assumenda odit debitis pariatur delectus illum quo, facere maxime! Illo quae quo dolores alias. Quibusdam amet in repellat incidunt accusantium?</p>
       </div>
     </section>
-
     <section class="project-discussions">
       <div class="heading">
         <h2>Discussões</h2>
@@ -155,15 +146,59 @@
           <img src="media/icone2.svg" alt="">
           <img src="media/icone3.svg" alt="">
         </div>
-          <p>
-          Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus questionamentos ou sugestões para o autor!
-          </p>
-          <button><i class="fas fa-plus"></i>  Criar tópico</button>
+        <p>
+          Sabia que o maior estímulo no desenvolvimento científico e cultural é a
+          curiosidade? Deixe seus questionamentos ou sugestões para o autor!
+        </p>
+        <button onclick="createTopic()" id="createtopic"><i class="fas fa-plus"></i> Criar tópico</button>
       </div>
 
+      <div  class="create-topic" id="topic-form">
+        <p>
+          Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!
+        </p>
+
+        <form class="create-topic">
+          <label for="subject">Assunto</label>
+          <input type="text" name="Assunto" id="subject"
+            placeholder="Defina um tópico sucinto para notificar os autores...">
+          <label for="content">Conteúdo</label>
+          <input type="text" name="Conteúdo" id="content">
+          <button onclick="sendTopic()" class="send-comment">Enviar</button>
+      </div>
+      <div class="sent-topic">
+        <h3>Seu tópico foi enviado com sucesso! :D</h3>
+        <p>
+          Agradecemos por sua contribuição, uma notificação será enviada ao seu email
+          assim que seu tópico for respondido!
+        </p>
+        <a href="https://proceedings.science/slaca/slaca-2019/trabalhos" class="c-orange">Descubra novos trabalhos aqui</a>
+        <a href="topic.html" class="btn-gradient"><i class="fas fa-plus"></i> Criar
+          tópico</a>
+          <div class="comment-sent">
+
+            <div class="topic-options">
+              <i class="fas fa-check-double"></i>
+              <p>Aguardando feedback dos autores</p>
+              <a href="#" class="c-orange">Editar tópico</a>
+            </div>
+
+            <div class="glassmorphism">
+              <h4 class="comment-tittle">Lorem ipsum dolor sit.</h4>
+              <h5 class="comment-author">Lorem, ipsum dolor.</h5>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+              <div class="comment-reactions">
+                <i class="fas fa-ellipsis-v"></i>
+                <i class="fas fa-heart"></i>
+                1 like
+                1 resposta
+              </div>
+            </div>
+          </div>
+      </div>
 
       <details>
-        <summary  class="comment">
+        <summary class="comment">
           <h4 class="comment-tittle">Lorem ipsum dolor sit.</h4>
           <h5 class="comment-author">Lorem, ipsum dolor.</h5>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
@@ -177,13 +212,14 @@
         </summary>
 
         <div class="comment-answer">
-            <h5 class="comment-author">Lorem, ipsum dolor.</h5>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing.<p>
+          <h5 class="comment-author">Lorem, ipsum dolor.</h5>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing.
+          <p>
         </div>
       </details>
 
       <details>
-        <summary  class="comment">
+        <summary class="comment">
           <h4 class="comment-tittle">Lorem ipsum dolor sit.</h4>
           <h5 class="comment-author">Lorem, ipsum dolor.</h5>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
@@ -197,53 +233,55 @@
         </summary>
 
         <div class="comment-answer">
-            <div class="author">
-              <h5 class="comment-author">Lorem, ipsum dolor.</h5>
-              <div>
-                autor
-                <i class="fas fa-check-double"></i>
-              </div>
+          <div class="author">
+            <h5 class="comment-author">Lorem, ipsum dolor.</h5>
+            <div>
+              autor
+              <i class="fas fa-check-double"></i>
             </div>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing.<p>
+          </div>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing.
+          <p>
         </div>
 
         <div class="comment-answer">
-            <div class="author">
-              <h5 class="comment-author">Lorem, ipsum dolor.</h5>
-              <div>
-                autor
-                <i class="fas fa-check-double"></i>
-              </div>
+          <div class="author">
+            <h5 class="comment-author">Lorem, ipsum dolor.</h5>
+            <div>
+              autor
+              <i class="fas fa-check-double"></i>
             </div>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing.<p>
+          </div>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing.
+          <p>
         </div>
 
         <div class="comment-answer">
-            <div class="author">
-              <h5 class="comment-author">Lorem, ipsum dolor.</h5>
-              <div>
-                autor
-                <i class="fas fa-check-double"></i>
-              </div>
+          <div class="author">
+            <h5 class="comment-author">Lorem, ipsum dolor.</h5>
+            <div>
+              autor
+              <i class="fas fa-check-double"></i>
             </div>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing.<p>
+          </div>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing.
+          <p>
         </div>
 
         <div class="comment-answer">
-            <div class="author">
-              <h5 class="comment-author">Lorem, ipsum dolor.</h5>
-              <div>
-                autor
-                <i class="fas fa-check-double"></i>
-              </div>
+          <div class="author">
+            <h5 class="comment-author">Lorem, ipsum dolor.</h5>
+            <div>
+              autor
+              <i class="fas fa-check-double"></i>
             </div>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing.<p>
+          </div>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing.
+          <p>
         </div>
-
       </details>
-
-
     </section>
+
   </main>
 
   <footer>
@@ -264,5 +302,18 @@
       citar</p>
     </div>
   </footer>
+  <script src="assets/scripts/script.js"></script>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"
+      referrerpolicy="origin"></script>
+
+  <script>
+    tinymce.init({
+      selector: '#content',
+      menubar: false,
+      toolbar: 'undo redo | bold italic | alignleft aligncenter alignright alignjustify |',
+      statusbar: false
+    });
+  </script>
 </body>
 </html>
+

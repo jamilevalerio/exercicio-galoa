@@ -18,10 +18,9 @@ function sendTopic(){
 
 }
 
-const menuMobile = document.querySelector('.menu-mobile')
-const sidebar = document.querySelector ('.sidebar')
-
-menuMobile.addEventListener ('click', showSidebar)
+const menuMobile = document.querySelector('.menu-mobile');
+const sidebar = document.querySelector ('.sidebar');
+menuMobile.addEventListener ('click', showSidebar);
 
 function showSidebar() {
   if (sidebar.style.display == 'none') {
@@ -31,4 +30,15 @@ function showSidebar() {
   }
 }
 
+const seeMoreBtn = document.querySelector('.see-more');
+const abstract = document.querySelector('.abstract');
+seeMoreBtn.addEventListener('click', seeMore);
 
+function seeMore() {
+  if (abstract.style.display == 'none') {
+    abstract.style.display = ('block')
+    seeMoreBtn.style.display = 'none'
+  } else {
+    abstract.style.display = ('none')
+  }
+}
